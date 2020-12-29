@@ -1,6 +1,6 @@
 {
   "name": "react-basics",
-  "homepage": "http://ghelanijimmy.github.io/react-redux-hooks-graphql/",
+  "homepage": "https://ghelanijimmy.github.io/react-redux-hooks-graphql/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,11 +16,11 @@
   },
   "scripts": {
     "start": "PUBLIC_URL=/ react-scripts start",
-    "build": "rm -rf ./docs && PUBLIC_URL=https://ghelanijimmy.github.io/react-redux-hooks-graphql/ react-scripts build && mkdir docs && cp -r ./build/** ./docs",
+    "build": "rm -rf ./docs && react-scripts build && mkdir docs && cp -r ./build/** ./docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "npm run predeploy && gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
