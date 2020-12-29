@@ -15,7 +15,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "PUBLIC_URL=/ react-scripts start",
+    "start": "react-scripts start",
     "build": "rm -rf ./docs && react-scripts build && mkdir docs && cp -r ./build/** ./docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
