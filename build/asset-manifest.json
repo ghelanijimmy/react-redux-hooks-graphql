@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-redux-hooks-graphql/static/css/main.aa7c87db.chunk.css",
-    "main.js": "/react-redux-hooks-graphql/static/js/main.168d4864.chunk.js",
-    "main.js.map": "/react-redux-hooks-graphql/static/js/main.168d4864.chunk.js.map",
+    "main.js": "/react-redux-hooks-graphql/static/js/main.d1522e66.chunk.js",
+    "main.js.map": "/react-redux-hooks-graphql/static/js/main.d1522e66.chunk.js.map",
     "runtime-main.js": "/react-redux-hooks-graphql/static/js/runtime-main.3c0516f1.js",
     "runtime-main.js.map": "/react-redux-hooks-graphql/static/js/runtime-main.3c0516f1.js.map",
     "static/js/2.13a8903c.chunk.js": "/react-redux-hooks-graphql/static/js/2.13a8903c.chunk.js",
@@ -16,6 +16,6 @@
     "static/js/runtime-main.3c0516f1.js",
     "static/js/2.13a8903c.chunk.js",
     "static/css/main.aa7c87db.chunk.css",
-    "static/js/main.168d4864.chunk.js"
+    "static/js/main.d1522e66.chunk.js"
   ]
 }
