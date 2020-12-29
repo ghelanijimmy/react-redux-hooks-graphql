@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/react-redux-hooks-graphql/static/css/main.aa7c87db.chunk.css",
-    "main.js": "/react-redux-hooks-graphql/static/js/main.85c46530.chunk.js",
-    "main.js.map": "/react-redux-hooks-graphql/static/js/main.85c46530.chunk.js.map",
-    "runtime-main.js": "/react-redux-hooks-graphql/static/js/runtime-main.3c0516f1.js",
-    "runtime-main.js.map": "/react-redux-hooks-graphql/static/js/runtime-main.3c0516f1.js.map",
-    "static/js/2.13a8903c.chunk.js": "/react-redux-hooks-graphql/static/js/2.13a8903c.chunk.js",
-    "static/js/2.13a8903c.chunk.js.map": "/react-redux-hooks-graphql/static/js/2.13a8903c.chunk.js.map",
-    "index.html": "/react-redux-hooks-graphql/index.html",
-    "static/css/main.aa7c87db.chunk.css.map": "/react-redux-hooks-graphql/static/css/main.aa7c87db.chunk.css.map",
-    "static/js/2.13a8903c.chunk.js.LICENSE.txt": "/react-redux-hooks-graphql/static/js/2.13a8903c.chunk.js.LICENSE.txt",
-    "static/media/crown.3a4e2b15.svg": "/react-redux-hooks-graphql/static/media/crown.3a4e2b15.svg"
+    "main.css": "https://ghelanijimmy.github.io/react-redux-hooks-graphql/static/css/main.aa7c87db.chunk.css",
+    "main.js": "https://ghelanijimmy.github.io/react-redux-hooks-graphql/static/js/main.85c46530.chunk.js",
+    "main.js.map": "https://ghelanijimmy.github.io/react-redux-hooks-graphql/static/js/main.85c46530.chunk.js.map",
+    "runtime-main.js": "https://ghelanijimmy.github.io/react-redux-hooks-graphql/static/js/runtime-main.965ad338.js",
+    "runtime-main.js.map": "https://ghelanijimmy.github.io/react-redux-hooks-graphql/static/js/runtime-main.965ad338.js.map",
+    "static/js/2.13a8903c.chunk.js": "https://ghelanijimmy.github.io/react-redux-hooks-graphql/static/js/2.13a8903c.chunk.js",
+    "static/js/2.13a8903c.chunk.js.map": "https://ghelanijimmy.github.io/react-redux-hooks-graphql/static/js/2.13a8903c.chunk.js.map",
+    "index.html": "https://ghelanijimmy.github.io/react-redux-hooks-graphql/index.html",
+    "static/css/main.aa7c87db.chunk.css.map": "https://ghelanijimmy.github.io/react-redux-hooks-graphql/static/css/main.aa7c87db.chunk.css.map",
+    "static/js/2.13a8903c.chunk.js.LICENSE.txt": "https://ghelanijimmy.github.io/react-redux-hooks-graphql/static/js/2.13a8903c.chunk.js.LICENSE.txt",
+    "static/media/crown.3a4e2b15.svg": "https://ghelanijimmy.github.io/react-redux-hooks-graphql/static/media/crown.3a4e2b15.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.3c0516f1.js",
+    "static/js/runtime-main.965ad338.js",
     "static/js/2.13a8903c.chunk.js",
     "static/css/main.aa7c87db.chunk.css",
     "static/js/main.85c46530.chunk.js"
