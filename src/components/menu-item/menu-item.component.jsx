@@ -6,8 +6,6 @@ const MenuItem = ({ title, imageUrl, size, linkUrl }) => {
   const history = useHistory();
   const match = useRouteMatch();
 
-  console.log(match);
-
   return (
     <div
       className={`${menuItemStyles.menuItem} ${menuItemStyles[size]}`}

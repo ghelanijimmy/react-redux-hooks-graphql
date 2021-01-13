@@ -49,10 +49,14 @@ const SignIn = () => {
           handleChange={handleChange}
           label="password"
         />
-        <CustomButton type="submit" value="Submit form">
-          Submit form
-        </CustomButton>
-        <CustomButton onClick={signInWithGoogle}>Submit form</CustomButton>
+        <div className={signInStyles.buttons}>
+          <CustomButton type="submit" value="Submit form">
+            Sign In
+          </CustomButton>
+          <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+            Sign in with Google
+          </CustomButton>
+        </div>
       </form>
     </div>
   );
