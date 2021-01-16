@@ -2,12 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
+import CartIcon from "../cart-icon/cart-icon.component";
 import headerStyles from "./header.styles.module.scss";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 import { auth } from "../../firebase/firebase.utils";
 
 const Header = () => {
   const currentUser = useSelector(state => state?.user?.currentUser);
+  const isCartHidden = useSelector(state => state.cart.hidden);
   return (
     <div className={headerStyles.header}>
       <Link to="/" className={headerStyles.logoContainer}>
@@ -29,7 +32,9 @@ const Header = () => {
             SIGN IN
           </Link>
         )}
+        <CartIcon />
       </div>
+      {!isCartHidden && <CartDropdown />}
     </div>
   );
 };
