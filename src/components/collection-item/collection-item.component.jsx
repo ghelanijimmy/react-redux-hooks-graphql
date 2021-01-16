@@ -1,4 +1,5 @@
 import React from "react";
+import CustomButton from "../custom-button/custom-button.component";
 import itemStyles from "./collection-item.styles.module.scss";
 
 const CollectionItem = ({ id, name, price, imageUrl }) => {
@@ -14,6 +15,11 @@ const CollectionItem = ({ id, name, price, imageUrl }) => {
         <span className={itemStyles.name}>{name}</span>
         <span className={itemStyles.price}>{price}</span>
       </div>
+
+      <CustomButton addClass={itemStyles.customButton} inverted>
+        {" "}
+        Add to cart{" "}
+      </CustomButton>
     </div>
   );
 };
