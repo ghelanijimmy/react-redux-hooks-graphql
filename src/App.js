@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Switch, Redirect } from "react-router-dom";
 import Header from "./components/header/header.component";
+import CheckoutPage from "./pages/checkout/checkout.component";
 import Homepage from "./pages/homepage/homepage.component";
 import ShopPage from "./pages/shop/shop.component";
 import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
@@ -53,6 +54,7 @@ const App = () => {
             currentUser ? <Redirect to="/" /> : <SignInAndSignUp />
           }
         />
+        <Route exact path="/checkout" component={CheckoutPage} />
       </Switch>
     </div>
   );
