@@ -4,9 +4,8 @@ import CustomButton from "../custom-button/custom-button.component";
 
 const CartDropdown = () => (
   <div className={cartDropDownStyles.cartDropdown}>
-    <div className={cartDropDownStyles.cartItems}>
-      <CustomButton>GO TO CHECKOUT</CustomButton>
-    </div>
+    <div className={cartDropDownStyles.cartItems}></div>
+    <CustomButton>GO TO CHECKOUT</CustomButton>
   </div>
 );
 

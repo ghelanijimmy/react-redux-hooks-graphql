@@ -1,8 +1,21 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../redux/cart/cart.actions";
 import CustomButton from "../custom-button/custom-button.component";
 import itemStyles from "./collection-item.styles.module.scss";
 
-const CollectionItem = ({ id, name, price, imageUrl }) => {
+const CollectionItem = ({ item }) => {
+  const { name, price, imageUrl } = item;
+  /**
+   * Dispatch function
+   * @type {any}
+   */
+  const dispatch = useDispatch();
+
+  const handleAddItem = () => {
+    dispatch(addItem(item));
+  };
+
   return (
     <div className={itemStyles.collectionItem}>
       <div
@@ -16,9 +29,12 @@ const CollectionItem = ({ id, name, price, imageUrl }) => {
         <span className={itemStyles.price}>{price}</span>
       </div>
 
-      <CustomButton addClass={itemStyles.customButton} inverted>
-        {" "}
-        Add to cart{" "}
+      <CustomButton
+        addClass={itemStyles.customButton}
+        inverted
+        onClick={handleAddItem}
+      >
+        Add to cart
       </CustomButton>
     </div>
   );
