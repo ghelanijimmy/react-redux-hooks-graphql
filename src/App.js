@@ -8,10 +8,11 @@ import ShopPage from "./pages/shop/shop.component";
 import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/user.actions";
+import { selectCurrentUser } from "./redux/user/user.selectors";
 import { USER_TYPES } from "./redux/user/user.types";
 
 const App = () => {
-  const currentUser = useSelector(state => state?.user?.currentUser);
+  const currentUser = useSelector(selectCurrentUser);
 
   /**
    * Dispatch function
