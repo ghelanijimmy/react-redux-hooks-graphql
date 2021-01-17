@@ -8,7 +8,6 @@ const CustomButton = ({
   addClass,
   ...otherProps
 }) => {
-  console.log(addClass);
   return (
     <button
       className={`
