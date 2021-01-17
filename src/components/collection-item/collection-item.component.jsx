@@ -4,7 +4,7 @@ import { addItem } from "../../redux/cart/cart.actions";
 import CustomButton from "../custom-button/custom-button.component";
 import itemStyles from "./collection-item.styles.module.scss";
 
-const CollectionItem = ({ item }) => {
+const CollectionItem = ({ item, addClass }) => {
   const { name, price, imageUrl } = item;
   /**
    * Dispatch function
@@ -17,7 +17,7 @@ const CollectionItem = ({ item }) => {
   };
 
   return (
-    <div className={itemStyles.collectionItem}>
+    <div className={`${itemStyles.collectionItem} ${addClass}`}>
       <div
         className={itemStyles.image}
         style={{
