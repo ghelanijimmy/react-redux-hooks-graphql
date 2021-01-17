@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { selectIsCartHidden } from "../../redux/cart/cart.selectors";
+import { selectCurrentUser } from "../../redux/user/user.selectors";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 import CartIcon from "../cart-icon/cart-icon.component";
 import headerStyles from "./header.styles.module.scss";
@@ -9,8 +11,9 @@ import { ReactComponent as Logo } from "../../assets/crown.svg";
 import { auth } from "../../firebase/firebase.utils";
 
 const Header = () => {
-  const currentUser = useSelector(state => state?.user?.currentUser);
-  const isCartHidden = useSelector(state => state.cart.hidden);
+  const currentUser = useSelector(selectCurrentUser);
+  const isCartHidden = useSelector(selectIsCartHidden);
+
   return (
     <div className={headerStyles.header}>
       <Link to="/" className={headerStyles.logoContainer}>
