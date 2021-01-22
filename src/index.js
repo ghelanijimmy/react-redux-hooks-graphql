@@ -9,7 +9,6 @@ import { store, persistor } from "./redux/store";
 
 ReactDOM.render(
   <Provider store={store}>
-    {console.log(store?.getState?.())}
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <PersistGate persistor={persistor}>
         <App />
