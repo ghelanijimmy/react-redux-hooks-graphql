@@ -1,6 +1,5 @@
 {
   "name": "react-basics",
-  "homepage": "http://ghelanijimmy.github.io/react-redux-hooks-graphql/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
