@@ -2,12 +2,12 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { selectDirectorySections } from "../../redux/directory/directory.selectors";
 import MenuItem from "../menu-item/menu-item.component";
-import directoryStyles from "./directory.styles.module.scss";
+import DirectoryMenuContainer from "./directory-styles";
 
 const Directory = () => {
   const sections = useSelector(selectDirectorySections);
   return (
-    <div className={directoryStyles.directoryMenu}>
+    <DirectoryMenuContainer>
       {sections.map(({ title, id, imageUrl, linkUrl, size }) => (
         <MenuItem
           key={id}
@@ -17,7 +17,7 @@ const Directory = () => {
           size={size}
         />
       ))}
-    </div>
+    </DirectoryMenuContainer>
   );
 };
 

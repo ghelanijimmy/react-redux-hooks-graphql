@@ -1,10 +1,16 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { addItem } from "../../redux/cart/cart.actions";
-import CustomButton from "../custom-button/custom-button.component";
-import itemStyles from "./collection-item.styles.module.scss";
+import {
+  AddButton,
+  BackgroundImage,
+  CollectionFooterContainer,
+  CollectionItemContainer,
+  NameContainer,
+  PriceContainer
+} from "./collection-item.styles";
 
-const CollectionItem = ({ item, addClass }) => {
+const CollectionItem = ({ item }) => {
   const { name, price, imageUrl } = item;
   /**
    * Dispatch function
@@ -17,26 +23,21 @@ const CollectionItem = ({ item, addClass }) => {
   };
 
   return (
-    <div className={`${itemStyles.collectionItem} ${addClass}`}>
-      <div
-        className={itemStyles.image}
+    <CollectionItemContainer>
+      <BackgroundImage
         style={{
           backgroundImage: `url(${imageUrl})`
         }}
       />
-      <div className={itemStyles.collectionFooter}>
-        <span className={itemStyles.name}>{name}</span>
-        <span className={itemStyles.price}>{price}</span>
-      </div>
+      <CollectionFooterContainer>
+        <NameContainer>{name}</NameContainer>
+        <PriceContainer>{price}</PriceContainer>
+      </CollectionFooterContainer>
 
-      <CustomButton
-        addClass={itemStyles.customButton}
-        inverted
-        onClick={handleAddItem}
-      >
+      <AddButton inverted onClick={handleAddItem}>
         Add to cart
-      </CustomButton>
-    </div>
+      </AddButton>
+    </CollectionItemContainer>
   );
 };
 CollectionItem.propTypes = {};

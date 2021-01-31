@@ -6,45 +6,51 @@ import {
   selectCartItems,
   selectCartTotal
 } from "../../redux/cart/cart.selectors";
-import checkoutStyles from "./checkout.styles.module.scss";
+import {
+  CheckoutContainer,
+  CheckoutHeaderBlock,
+  CheckoutHeaderContainer,
+  CheckoutTotalContainer,
+  TestWarningContainer
+} from "./checkout.styles";
 
 const CheckoutPage = () => {
   const cartItems = useSelector(selectCartItems);
   const cartTotal = useSelector(selectCartTotal);
 
   return (
-    <div className={checkoutStyles.checkoutPage}>
-      <div className={checkoutStyles.checkoutHeader}>
-        <div className={checkoutStyles.headerBlock}>
+    <CheckoutContainer>
+      <CheckoutHeaderContainer>
+        <CheckoutHeaderBlock>
           <span>Product</span>
-        </div>
-        <div className={checkoutStyles.headerBlock}>
+        </CheckoutHeaderBlock>
+        <CheckoutHeaderBlock>
           <span>Description</span>
-        </div>
-        <div className={checkoutStyles.headerBlock}>
+        </CheckoutHeaderBlock>
+        <CheckoutHeaderBlock>
           <span>Quantity</span>
-        </div>
-        <div className={checkoutStyles.headerBlock}>
+        </CheckoutHeaderBlock>
+        <CheckoutHeaderBlock>
           <span>Price</span>
-        </div>
-        <div className={checkoutStyles.headerBlock}>
+        </CheckoutHeaderBlock>
+        <CheckoutHeaderBlock>
           <span>Remove</span>
-        </div>
-      </div>
+        </CheckoutHeaderBlock>
+      </CheckoutHeaderContainer>
       {cartItems.map(cartItem => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
-      <div className={checkoutStyles.total}>
+      <CheckoutTotalContainer>
         <span>{cartTotal}</span>
-      </div>
-      <div className={checkoutStyles.testWarning}>
+      </CheckoutTotalContainer>
+      <TestWarningContainer>
         *Please use the following test credit card for payments*
         <br />
         4242 4242 4242 4242 - exp (any future date) - cvv (any 3 digits)
-      </div>
+      </TestWarningContainer>
 
       <StripButton price={cartTotal} />
-    </div>
+    </CheckoutContainer>
   );
 };
 

@@ -5,7 +5,13 @@ import {
   clearItemFromCart,
   removeItem
 } from "../../redux/cart/cart.actions";
-import checkoutItemStyles from "./checkout-item.styles.module.scss";
+import {
+  CheckoutItemContainer,
+  ImageContainer,
+  QuantityContainer,
+  RemoveButtonContainer,
+  TextContainer
+} from "./checkout-item.styles";
 
 const CheckoutItem = ({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
@@ -28,34 +34,21 @@ const CheckoutItem = ({ cartItem }) => {
   };
 
   return (
-    <div className={checkoutItemStyles.checkoutItem}>
-      <div className={checkoutItemStyles.imageContainer}>
+    <CheckoutItemContainer>
+      <ImageContainer>
         <img src={imageUrl} alt="item" />
-      </div>
-      <span className={checkoutItemStyles.name}>{name}</span>
-      <span className={checkoutItemStyles.quantity}>
-        <div
-          className={checkoutItemStyles.arrow}
-          onClick={handleDecreaseQuantity}
-        >
-          &#10094;
-        </div>
-        <span className={checkoutItemStyles.value}>{quantity}</span>
-        <div
-          className={checkoutItemStyles.arrow}
-          onClick={handleIncreaseQuantity}
-        >
-          &#10095;
-        </div>
-      </span>
-      <span className={checkoutItemStyles.price}>{price}</span>
-      <div
-        className={checkoutItemStyles.removeButton}
-        onClick={handleRemoveItemFromCart}
-      >
+      </ImageContainer>
+      <TextContainer>{name}</TextContainer>
+      <QuantityContainer>
+        <div onClick={handleDecreaseQuantity}>&#10094;</div>
+        <span>{quantity}</span>
+        <div onClick={handleIncreaseQuantity}>&#10095;</div>
+      </QuantityContainer>
+      <TextContainer>{price}</TextContainer>
+      <RemoveButtonContainer onClick={handleRemoveItemFromCart}>
         &#10005;
-      </div>
-    </div>
+      </RemoveButtonContainer>
+    </CheckoutItemContainer>
   );
 };
 CheckoutItem.propTypes = {};
