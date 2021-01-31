@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory, useRouteMatch } from "react-router-dom";
 import CollectionItem from "../collection-item/collection-item.component";
 import {
   CollectionPreviewContainer,
@@ -6,10 +7,16 @@ import {
   PreviewContainer
 } from "./collection-preview.styles";
 
-const CollectionPreview = ({ title, items }) => {
+const CollectionPreview = ({ title, items, routeName }) => {
+  const history = useHistory();
+  const match = useRouteMatch();
   return (
     <CollectionPreviewContainer>
-      <CollectionTitle>{title.toUpperCase()}</CollectionTitle>
+      <CollectionTitle
+        onClick={() => history.push(`${match.path}/${routeName}`)}
+      >
+        {title.toUpperCase()}
+      </CollectionTitle>
       <PreviewContainer>
         {items
           .filter((item, index) => index < 4)
